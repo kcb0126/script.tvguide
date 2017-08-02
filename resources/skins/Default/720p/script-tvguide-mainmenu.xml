@@ -1,0 +1,4759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+    <controls>
+        <control type="image" id="1">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture>background-defeat.png</texture>
+            <animation effect="fade" start="0" end="100" time="6500">WindowOpen</animation>
+        </control>
+        
+        <control type="image" id="2">
+            <description>Tv Guide Blue Box</description>
+            <posx>306.5</posx>
+            <posy>7</posy>
+            <width>154</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>tvguide_blue.png</texture>
+        </control>
+
+        <control type="image" id="3">
+            <description>Tv Guide Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>7</posy>
+            <width>154</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>tvguide_yellow.png</texture>
+            <animation effect="fade" start="0" end="0" time="0">WindowOpen</animation>
+        </control>
+
+        <control type="image" id="4">
+            <description>Reminders Yellow Box</description>
+            <posx>460</posx>
+            <posy>7</posy>
+            <width>188</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>reminders_yellow.png</texture>
+        </control>
+
+        <control type="image" id="5">
+            <description>Reminders Blue Box</description>
+             <posx>460</posx>
+            <posy>7</posy>
+            <width>188</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>reminders_blue.png</texture>
+            <animation effect="fade" start="0" end="100" time="6500">WindowOpen</animation>
+        </control>
+
+        <control type="image" id="6">
+            <description>Recorded Yellow Box</description>
+            <posx>648</posx>
+            <posy>7</posy>
+            <width>165</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>recorded_yellow.png</texture>
+        </control>
+
+        <control type="image" id="7">
+            <description>Recorded Blue Box</description>
+            <posx>648</posx>
+            <posy>7</posy>
+            <width>165</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>recorded_blue.png</texture>
+            <animation effect="fade" start="0" end="100" time="6500">WindowOpen</animation>
+        </control>
+
+        <control type="image" id="8">
+            <description>Settings Yellow Box</description>
+            <posx>813</posx>
+            <posy>7</posy>
+            <width>149</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>settings_yellow.png</texture>
+        </control>
+
+        <control type="image" id="9">
+            <description>Settings Blue Box</description>
+            <posx>813</posx>
+            <posy>7</posy>
+            <width>149</width>
+            <height>95</height>
+            <visible>true</visible>
+            <texture>settings_blue.png</texture>
+            <animation effect="fade" start="0" end="100" time="6500">WindowOpen</animation>
+        </control>
+
+        <control type="image" id="10">
+            <description>All Channels Blue Box</description>
+            <posx>306.5</posx>
+            <posy>124</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="11">
+            <description>All Channels Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>124</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="12">
+            <description>Entertainment Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>180</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+         <control type="image" id="13">
+             <description>Entertainment Blue Box</description>
+            <posx>306.5</posx>
+            <posy>180</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="14">
+            <description>Movies Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>236</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="15">
+             <description>Movies Blue Box</description>
+            <posx>306.5</posx>
+            <posy>236</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="16">
+            <description>Kids Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>292.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="17">
+            <description>Kids Blue Box</description>
+            <posx>306.5</posx>
+            <posy>292.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="18">
+            <description>Sports Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>349</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="19">
+            <description>Sports Blue Box</description>
+            <posx>306.5</posx>
+            <posy>349</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="20">
+            <description>News Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>405</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="21">
+            <description>News Blue Box</description>
+            <posx>306.5</posx>
+            <posy>405</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="22">
+            <description>Documentaries Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>461</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="23">
+            <description>Documentaries Blue Box</description>
+            <posx>306.5</posx>
+            <posy>461</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="24">
+            <description>Music And Radio Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>517.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="25">
+            <description>Music And Radio Blue Box</description>
+            <posx>306.5</posx>
+            <posy>517.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="26">
+            <description>Adult Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>573.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="27">
+            <description>Adult Blue Box</description>
+            <posx>306.5</posx>
+            <posy>573.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="28">
+            <description>Favourites Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>630</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="29">
+            <description>Favourites Blue Box</description>
+            <posx>306.5</posx>
+            <posy>630</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="30">
+            <description>Picture Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>124</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="31">
+            <description>Picture Blue Box</description>
+            <posx>306.5</posx>
+            <posy>124</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="32">
+            <description>Sound Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>180</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="33">
+            <description>Sound Blue Box</description>
+            <posx>306.5</posx>
+            <posy>180</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="34">
+            <description>Change Language Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>236</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="35">
+            <description>Change Language Blue Box</description>
+            <posx>306.5</posx>
+            <posy>236</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="36">
+            <description>Parental Control Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>292.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="37">
+            <description>Parental Control Blue Box</description>
+            <posx>306.5</posx>
+            <posy>292.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="38">
+            <description>View Restrictions Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>349</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="39">
+            <description>View Restrictions Blue Box</description>
+            <posx>306.5</posx>
+            <posy>349</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="40">
+            <description>Remove Channels Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>405</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="41">
+            <description>Remove Channels Blue Box</description>
+            <posx>306.5</posx>
+            <posy>405</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="42">
+            <description>System Details Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>461</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="43">
+            <description>System Details Blue Box</description>
+            <posx>306.5</posx>
+            <posy>461</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="44">
+            <description>Speed Test Yellow Box</description>
+            <posx>306.5</posx>
+            <posy>517.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="45">
+            <description>Speed Test Blue Box</description>
+            <posx>306.5</posx>
+            <posy>517.5</posy>
+            <width>656</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+<!--------------------------------- English Language -----------------------------------------!-->
+
+        <control type="label" id="46">
+            <description>TV Guide Black</description>
+            <posx>330.3</posx>
+            <posy>71</posy>
+            <width>150</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30001]</label>
+        </control>
+
+        <control type="label" id="47">
+            <description>TV Guide Blue</description>
+            <posx>330.3</posx>
+            <posy>71</posy>
+            <width>150</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>0xFFBFD5AF</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30001]</label>
+        </control>
+
+        <control type="label" id="48">
+            <description>Reminders Black</description>
+            <posx>490.5</posx>
+            <posy>71</posy>
+            <width>155</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30002]</label>
+        </control>
+
+        <control type="label" id="49">
+            <description>Reminders Blue</description>
+            <posx>490.5</posx>
+            <posy>71</posy>
+            <width>155</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>0xFFBFD5AF</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30002]</label>
+        </control>
+
+        <control type="label" id="50">
+            <description>Recorded Black</description>
+            <posx>664.3</posx>
+            <posy>71</posy>
+            <width>150</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30003]</label>
+        </control>
+
+        <control type="label" id="51">
+            <description>Recorded Blue</description>
+            <posx>664.3</posx>
+            <posy>71</posy>
+            <width>150</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>0xFFBFD5AF</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30003]</label>
+        </control>
+
+        <control type="label" id="52">
+            <description>Setting Black</description>
+            <posx>827.3</posx>
+            <posy>71</posy>
+            <width>150</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30004]</label>
+        </control>
+
+        <control type="label" id="53">
+            <description>Setting Blue</description>
+            <posx>827.3</posx>
+            <posy>71</posy>
+            <width>150</width>
+            <height>31.5</height>
+            <align>left</align>
+            <font>Font_AerialBold21</font>
+            <textcolor>0xFFBFD5AF</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30004]</label>
+        </control>
+
+        <control type="label" id="54">
+            <description>All Channels Black</description>
+            <posx>348</posx>
+            <posy>138</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30005]</label>
+        </control>
+
+        <control type="label" id="55">
+            <description>All Channels Blue</description>
+            <posx>348</posx>
+            <posy>138</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30005]</label>
+        </control>
+
+        <control type="label" id="56">
+            <description>Entertainment Black</description>
+            <posx>348</posx>
+            <posy>195</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30006]</label>
+        </control>
+
+        <control type="label" id="57">
+            <description>Entertainment Blue</description>
+            <posx>348</posx>
+            <posy>195</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30006]</label>
+        </control>
+
+        <control type="label" id="58">
+            <description>Movies Black</description>
+            <posx>348</posx>
+            <posy>252</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30007]</label>
+        </control>
+
+        <control type="label" id="59">
+            <description>Movies Blue</description>
+            <posx>348</posx>
+            <posy>252</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30007]</label>
+        </control>
+
+        <control type="label" id="60">
+            <description>Kids Black</description>
+            <posx>348</posx>
+            <posy>307</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30008]</label>
+        </control>
+
+        <control type="label" id="61">
+            <description>Kids Blue</description>
+            <posx>348</posx>
+            <posy>307</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30008]</label>
+        </control>
+
+        <control type="label" id="62">
+            <description>Sports Black</description>
+            <posx>348</posx>
+            <posy>363</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30009]</label>
+        </control>
+
+        <control type="label" id="63">
+            <description>Sports Blue</description>
+            <posx>348</posx>
+            <posy>363</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30009]</label>
+        </control>
+
+        <control type="label" id="64">
+            <description>News Black</description>
+            <posx>348</posx>
+            <posy>419</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30010]</label>
+        </control>
+
+        <control type="label" id="65">
+            <description>News Blue</description>
+            <posx>348</posx>
+            <posy>420</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30010]</label>
+        </control>
+
+        <control type="label" id="66">
+            <description>Documentaries Black</description>
+            <posx>348</posx>
+            <posy>475</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30011]</label>
+        </control>
+
+        <control type="label" id="67">
+            <description>Documentaries Blue</description>
+            <posx>348</posx>
+            <posy>475</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30011]</label>
+        </control>
+
+        <control type="label" id="68">
+            <description>Music and Radio Black</description>
+            <posx>348</posx>
+            <posy>533</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30012]</label>
+        </control>
+
+        <control type="label" id="69">
+            <description>Music and Radio Blue</description>
+            <posx>348</posx>
+            <posy>533</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30012]</label>
+        </control>
+
+        <control type="label" id="70">
+            <description>Adult Black</description>
+            <posx>348</posx>
+            <posy>589</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30013]</label>
+        </control>
+
+        <control type="label" id="71">
+            <description>Adult Blue</description>
+            <posx>348</posx>
+            <posy>589</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30013]</label>
+        </control>
+
+        <control type="label" id="72">
+            <description>My Favourites Black</description>
+            <posx>348</posx>
+            <posy>643</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30014]</label>
+        </control>
+
+        <control type="label" id="73">
+            <description>My Favourites Blue</description>
+            <posx>348</posx>
+            <posy>643</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30014]</label>
+        </control>
+
+        <control type="label" id="74">
+            <description>Picture Black</description>
+            <posx>348</posx>
+            <posy>138</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30015]</label>
+        </control>
+
+        <control type="label" id="75">
+            <description>Picture Blue</description>
+            <posx>348</posx>
+            <posy>138</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30015]</label>
+        </control>
+
+        <control type="label" id="76">
+            <description>Sound Black</description>
+            <posx>348</posx>
+            <posy>195</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30016]</label>
+        </control>
+
+        <control type="label" id="77">
+            <description>Sound Blue</description>
+            <posx>348</posx>
+            <posy>195</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30016]</label>
+        </control>
+
+        <control type="label" id="78">
+            <description>Change Language Black</description>
+            <posx>348</posx>
+            <posy>252</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30017]</label>
+        </control>
+
+        <control type="label" id="79">
+            <description>Change Language Blue</description>
+            <posx>348</posx>
+            <posy>252</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30017]</label>
+        </control>
+
+        <control type="label" id="80">
+            <description>Parental Control Black</description>
+            <posx>348</posx>
+            <posy>307</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30018]</label>
+        </control>
+
+        <control type="label" id="81">
+            <description>Parental Control Blue</description>
+            <posx>348</posx>
+            <posy>307</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30018]</label>
+        </control>
+
+        <control type="label" id="82">
+            <description>View Restrictions Black</description>
+            <posx>348</posx>
+            <posy>363</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30019]</label>
+        </control>
+
+        <control type="label" id="83">
+            <description>View Restrictions Blue</description>
+            <posx>348</posx>
+            <posy>363</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30019]</label>
+        </control>
+
+        <control type="label" id="84">
+            <description>Remove Channels Black</description>
+            <posx>348</posx>
+            <posy>420</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30020]</label>
+        </control>
+
+        <control type="label" id="85">
+            <description>Remove Channels Blue</description>
+            <posx>348</posx>
+            <posy>420</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30020]</label>
+        </control>
+
+        <control type="label" id="86">
+            <description>System Details Black</description>
+            <posx>348</posx>
+            <posy>475</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30021]</label>
+        </control>
+
+        <control type="label" id="87">
+            <description>System Details Blue</description>
+            <posx>348</posx>
+            <posy>475</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30021]</label>
+        </control>
+
+        <control type="label" id="88">
+            <description>Speed test Black</description>
+            <posx>348</posx>
+            <posy>533</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30022]</label>
+        </control>
+
+        <control type="label" id="89">
+            <description>Speed test Blue</description>
+            <posx>348</posx>
+            <posy>533</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_AerialBold28</font>
+            <textcolor>0xFFA2BAE4</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30022]</label>
+        </control>
+
+        <control type="label" id="90">
+            <description>All Channels Yellow</description>
+            <posx>36</posx>
+            <posy>17</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold95</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30023]</label>
+        </control>
+
+        <control type="label" id="91">
+            <description>Entertainment Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30024]</label>
+        </control>
+
+        <control type="label" id="92">
+            <description>Movies Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30025]</label>
+        </control>
+
+        <control type="label" id="93">
+            <description>Kids Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30026]</label>
+        </control>
+
+        <control type="label" id="94">
+            <description>Sports Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30027]</label>
+        </control>
+
+        <control type="label" id="95">
+            <description>News Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30028]</label>
+        </control>
+
+        <control type="label" id="96">
+            <description>Documentaries Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30029]</label>
+        </control>
+
+        <control type="label" id="97">
+            <description>Music And Radio Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30030]</label>
+        </control>
+
+        <control type="label" id="98">
+            <description>Adult Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30031]</label>
+        </control>
+
+        <control type="label" id="99">
+            <description>Favourites Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30032]</label>
+        </control>
+
+        <!-- PICTURE SETTNGS -->
+        <control type="label" id="100">
+            <description>Picture Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30035]</label>
+        </control>
+
+        <control type="image" id="101">
+            <description>Change Picture Yellow</description>
+            <posx>76.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="102">
+            <description>Change Picture Blue</description>
+            <posx>76.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="103">
+            <description>Change Picture Black</description>
+            <posx>96.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30036]</label>
+        </control>
+
+        <control type="label" id="104">
+            <description>Change Picture White</description>
+            <posx>96.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30036]</label>
+        </control>
+
+        <control type="image" id="105">
+            <description>Change Picture ON Yellow</description>
+            <posx>730</posx>
+            <posy>178</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="106">
+            <description>Change Picture ON Blue</description>
+            <posx>730</posx>
+            <posy>178</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="107">
+            <description>Left Arrow Picture Settings Black</description>
+            <posx>740</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="108">
+            <description>Left Arrow Picture Settings White</description>
+            <posx>740</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="109">
+            <description>Right Arrow Picture Settings Black</description>
+            <posx>996</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="110">
+            <description>Right Arrow Picture Settings White</description>
+            <posx>996</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="label" id="111">
+            <description>Picture 4:3 Black</description>
+            <posx>770</posx>
+            <posy>178</posy>
+            <width>260</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30037]</label>
+        </control>
+
+        <control type="label" id="112">
+            <description>Picture 4:3 White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>260</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30037]</label>
+        </control>
+
+        <control type="label" id="113">
+            <description>Picture 16:9 Black</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30038]</label>
+        </control>
+
+        <control type="label" id="114">
+            <description>Picture 16:9 White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30038]</label>
+        </control>
+
+        <control type="label" id="115">
+            <description>Picture 16:10 Black</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30039]</label>
+        </control>
+
+        <control type="label" id="116">
+            <description>Picture 16:10 White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30039]</label>
+        </control>
+
+        <control type="label" id="117">
+            <description>Picture 5:4 Black</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30040]</label>
+        </control>
+
+        <control type="label" id="118">
+            <description>Picture 5:4 White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30040]</label>
+        </control>
+
+        <control type="label" id="119">
+            <description>Picture 15:9 Black</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30041]</label>
+        </control>
+
+        <control type="label" id="120">
+            <description>Picture 15:9 White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30041]</label>
+        </control>
+
+        <control type="image" id="121">
+            <description>Display Mode Yellow</description>
+            <posx>76.5</posx>
+            <posy>234</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="122">
+            <description>Display Mode Blue</description>
+            <posx>76.5</posx>
+            <posy>234</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="123">
+            <description>Display Mode Black</description>
+            <posx>96.5</posx>
+            <posy>234</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30042]</label>
+        </control>
+
+        <control type="label" id="124">
+            <description>Display Mode White</description>
+            <posx>96.5</posx>
+            <posy>234</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30042]</label>
+        </control>
+
+        <control type="image" id="125">
+            <description>Display Mode ON Yellow</description>
+            <posx>730</posx>
+            <posy>234</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="126">
+            <description>Display Mode ON Blue</description>
+            <posx>730</posx>
+            <posy>234</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="127">
+            <description>Display Mode ON Black</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="128">
+            <description>Display Mode ON White</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+        
+        <control type="label" id="129">
+            <description>Display Mode OFF Black</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="130">
+            <description>Display Mode OFF White</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="131">
+            <description>Left Arrow Display Mode Black</description>
+            <posx>740</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="132">
+            <description>Left Arrow Display Mode White</description>
+            <posx>740</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="133">
+            <description>Right Arrow Display Mode Black</description>
+            <posx>996</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="134">
+            <description>Right Arrow Display Mode White</description>
+            <posx>996</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="135">
+            <description>Resolution Yellow</description>
+            <posx>76.5</posx>
+            <posy>290</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="136">
+            <description>Resolution Blue</description>
+            <posx>76.5</posx>
+            <posy>290</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="137">
+            <description>Resolution Black</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30045]</label>
+        </control>
+        
+        <control type="label" id="138">
+            <description>Resolution White</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30045]</label>
+        </control>
+        
+        <control type="image" id="139">
+            <description>Resolution ON Yellow</description>
+            <posx>730</posx>
+            <posy>290</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="140">
+            <description>Resolution ON Blue</description>
+            <posx>730</posx>
+            <posy>290</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="141">
+            <description>Resolution ON Black</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="142">
+            <description>Resolution ON White</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="143">
+            <description>Resolution OFF Black</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="144">
+            <description>Resolution OFF White</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="145">
+            <description>Left Arrow Resolution Black</description>
+            <posx>740</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="146">
+            <description>Left Arrow Resolution White</description>
+            <posx>740</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="147">
+            <description>Right Arrow Resolution Black</description>
+            <posx>996</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="148">
+            <description>Right Arrow Resolution White</description>
+            <posx>996</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="149">
+            <description>On-Screen Channels Display Yellow</description>
+            <posx>76.5</posx>
+            <posy>345</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="150">
+            <description>On-Screen Channels Display Blue</description>
+            <posx>76.5</posx>
+            <posy>345</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="151">
+            <description>On-Screen Channels Display Black</description>
+            <posx>96.5</posx>
+            <posy>344</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30046]</label>
+        </control>
+        
+        <control type="label" id="152">
+            <description>On-Screen Channels Display White</description>
+            <posx>96.5</posx>
+            <posy>344</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30046]</label>
+        </control>
+        
+        <control type="image" id="153">
+            <description>On-Screen Channels Display ON Yellow</description>
+            <posx>730</posx>
+            <posy>345</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="154">
+            <description>On-Screen Channels Display ON Blue</description>
+            <posx>730</posx>
+            <posy>345</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="155">
+            <description>On-Screen Channels Display ON Black</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="156">
+            <description>On-Screen Channels Display ON White</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="157">
+            <description>On-Screen Channels Display OFF Black</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="158">
+            <description>On-Screen Channels Display OFF White</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="159">
+            <description>Left Arrow On-Screen Channels Display Black</description>
+            <posx>740</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="160">
+            <description>Left Arrow On-Screen Channels Display White</description>
+            <posx>740</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="161">
+            <description>Right Arrow On-Screen Channels Display Black</description>
+            <posx>996</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="162">
+            <description>Right Arrow On-Screen Channels Display White</description>
+            <posx>996</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="163">
+            <description>On-Screen Downtime Alert Yellow</description>
+            <posx>76.5</posx>
+            <posy>401</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="164">
+            <description>On-Screen Downtime Alert Blue</description>
+            <posx>76.5</posx>
+            <posy>401</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="165">
+            <description>On-Screen Downtime Alert Black</description>
+            <posx>96.5</posx>
+            <posy>398</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30049]</label>
+        </control>
+        
+        <control type="label" id="166">
+            <description>On-Screen Downtime Alert White</description>
+            <posx>96.5</posx>
+            <posy>398</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30049]</label>
+        </control>
+        
+        <control type="image" id="167">
+            <description>On-Screen Downtime Alert ON Yellow</description>
+            <posx>730</posx>
+            <posy>401</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="168">
+            <description>On-Screen Downtime Alert ON Blue</description>
+            <posx>730</posx>
+            <posy>401</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="169">
+            <description>On-Screen Downtime Alert ON Black</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="170">
+            <description>On-Screen Downtime Alert ON White</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="171">
+            <description>On-Screen Downtime Alert OFF Black</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="172">
+            <description>On-Screen Downtime Alert OFF White</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="173">
+            <description>Left Arrow On-Screen Downtime Alert Black</description>
+            <posx>740</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="174">
+            <description>Left Arrow On-Screen Downtime Alert White</description>
+            <posx>740</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="175">
+            <description>Right Arrow On-Screen Downtime Alert Black</description>
+            <posx>996</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="176">
+            <description>Right Arrow On-Screen Downtime Alert White</description>
+            <posx>996</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="177">
+            <description>Reminder Alert Yellow</description>
+            <posx>76.5</posx>
+            <posy>459</posy>
+            <width>606</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="178">
+            <description>Reminder Alert Blue</description>
+            <posx>76.5</posx>
+            <posy>456</posy>
+            <width>606</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="179">
+            <description>Reminder Alert Black</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30050]</label>
+        </control>
+        
+        <control type="label" id="180">
+            <description>Reminder Alert White</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30050]</label>
+        </control>
+        
+        <control type="image" id="181">
+            <description>Reminder Alert ON Yellow</description>
+            <posx>730</posx>
+            <posy>456</posy>
+            <width>306</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="182">
+            <description>Reminder Alert ON Blue</description>
+            <posx>730</posx>
+            <posy>456</posy>
+            <width>306</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="183">
+            <description>Reminder Alert ON Black</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="184">
+            <description>Reminder Alert ON White</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="185">
+            <description>Reminder Alert OFF Black</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="186">
+            <description>Reminder Alert OFF White</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="187">
+            <description>Left Arrow Reminder Alert Black</description>
+            <posx>740</posx>
+            <posy>467</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="188">
+            <description>Left Arrow Reminder Alert White</description>
+            <posx>740</posx>
+            <posy>467</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="189">
+            <description>Right Arrow Reminder Alert Black</description>
+            <posx>996</posx>
+            <posy>467</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="190">
+            <description>Right Arrow Reminder Alert White</description>
+            <posx>996</posx>
+            <posy>467</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="191">
+            <description>Save Settings Yellow</description>
+            <posx>76.5</posx>
+            <posy>510</posy>
+            <width>606</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="192">
+            <description>Save Settings Blue</description>
+            <posx>76.5</posx>
+            <posy>510</posy>
+            <width>606</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="193">
+            <description>Save Settings Black</description>
+            <posx>96.5</posx>
+            <posy>506</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30070]</label>
+        </control>
+
+        <control type="label" id="194">
+            <description>Save Settings White</description>
+            <posx>96.5</posx>
+            <posy>506</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30051]</label>
+        </control>
+        
+        <control type="image" id="195">
+            <description>Reset Button</description>
+            <posx>96.5</posx>
+            <posy>589</posy>
+            <width>356</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="196">
+            <description>Reset All Settings</description>
+            <posx>113.5</posx>
+            <posy>589</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30052]</label>
+        </control>
+
+        <control type="label" id="197">
+            <description>Use < > to switch settings</description>
+            <posx>76.5</posx>
+            <posy>659</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30034]</label>
+        </control>
+        
+        <control type="image" id="198">
+            <description>Reset Button Red</description>
+            <posx>76.5</posx>
+            <posy>588</posy>
+            <width>28</width>
+            <height>28</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="199">
+            <description>Left Right Button Settings</description>
+            <posx>162.5</posx>
+            <posy>658</posy>
+            <width>51</width>
+            <height>28</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="200">
+            <description>Sound Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30053]</label>
+        </control>
+
+        <control type="image" id="201">
+            <description>Sound Audio Output Yellow</description>
+            <posx>76.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="202">
+            <description>Sound Audio Output Blue</description>
+            <posx>76.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="203">
+            <description>Sound Audio Output Black</description>
+            <posx>96.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30054]</label>
+        </control>
+
+        <control type="label" id="204">
+            <description>Sound Audio Output White</description>
+            <posx>96.5</posx>
+            <posy>178</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30054]</label>
+        </control>
+
+        <control type="image" id="205">
+            <description>Sound Audio Output ON Yellow</description>
+            <posx>730</posx>
+            <posy>178</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="206">
+            <description>Sound Audio Output ON Blue</description>
+            <posx>730</posx>
+            <posy>178</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="207">
+            <description>Left Arrow Sound Audio Output Black</description>
+            <posx>740</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="208">
+            <description>Left Arrow Sound Audio Output White</description>
+            <posx>740</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="209">
+            <description>Right Arrow Sound Audio Output Black</description>
+            <posx>996</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="210">
+            <description>Right Arrow Sound Audio Output White</description>
+            <posx>996</posx>
+            <posy>190</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="label" id="211">
+            <description>Sound Digital Black</description>
+            <posx>770</posx>
+            <posy>178</posy>
+            <width>260</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30037]</label>
+        </control>
+
+        <control type="label" id="212">
+            <description>Sound Digital White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>260</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30037]</label>
+        </control>
+
+        <control type="label" id="213">
+            <description>Sound Stereo Black</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30038]</label>
+        </control>
+
+        <control type="label" id="214">
+            <description>Sound Stereo White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30038]</label>
+        </control>
+
+        <control type="label" id="215">
+            <description>Sound Mono Black</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30039]</label>
+        </control>
+
+        <control type="label" id="216">
+            <description>Sound Mono White</description>
+            <posx>770</posx>
+            <posy>476</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30039]</label>
+        </control>
+
+        <control type="image" id="217">
+            <description>Volume Level Yellow</description>
+            <posx>76.5</posx>
+            <posy>234</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="218">
+            <description>Volume Level Blue</description>
+            <posx>76.5</posx>
+            <posy>234</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="219">
+            <description>Volume Level Black</description>
+            <posx>96.5</posx>
+            <posy>232</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30058]</label>
+        </control>
+
+        <control type="label" id="220">
+            <description>Volume Level White</description>
+            <posx>96.5</posx>
+            <posy>232</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30058]</label>
+        </control>
+
+        <control type="image" id="221">
+            <description>Volume Level ON Yellow</description>
+            <posx>730</posx>
+            <posy>234</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="222">
+            <description>Volume Level ON Blue</description>
+            <posx>730</posx>
+            <posy>234</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="223">
+            <description>Volume Level ON Black</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="224">
+            <description>Volume Level ON White</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+        
+        <control type="label" id="225">
+            <description>Volume Level OFF Black</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="226">
+            <description>Volume Level OFF White</description>
+            <posx>770</posx>
+            <posy>254</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="227">
+            <description>Left Arrow Volume Level Black</description>
+            <posx>740</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="228">
+            <description>Left Arrow Volume Level White</description>
+            <posx>740</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="229">
+            <description>Right Arrow Volume Level Black</description>
+            <posx>996</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="230">
+            <description>Right Arrow Volume Level White</description>
+            <posx>996</posx>
+            <posy>247</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="231">
+            <description>Audio Output Device Yellow</description>
+            <posx>76.5</posx>
+            <posy>290</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="232">
+            <description>Audio Output Device Blue</description>
+            <posx>76.5</posx>
+            <posy>290</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="233">
+            <description>Audio Output Device Black</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30059]</label>
+        </control>
+        
+        <control type="label" id="234">
+            <description>Audio Output Device White</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30059]</label>
+        </control>
+        
+        <control type="image" id="235">
+            <description>Audio Output Device ON Yellow</description>
+            <posx>730</posx>
+            <posy>290</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="236">
+            <description>Audio Output Device ON Blue</description>
+            <posx>730</posx>
+            <posy>290</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="237">
+            <description>Audio Output Device ON Black</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="238">
+            <description>Audio Output Device ON White</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="239">
+            <description>Audio Output Device OFF Black</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="240">
+            <description>Audio Output Device OFF White</description>
+            <posx>96.5</posx>
+            <posy>288</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="241">
+            <description>Left Arrow Audio Output Device Black</description>
+            <posx>740</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="242">
+            <description>Left Arrow Audio Output Device White</description>
+            <posx>740</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="243">
+            <description>Right Arrow Audio Output Device Black</description>
+            <posx>996</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="244">
+            <description>Right Arrow Audio Output Device White</description>
+            <posx>996</posx>
+            <posy>304</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="245">
+            <description>Background Music Yellow</description>
+            <posx>76.5</posx>
+            <posy>345</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="246">
+            <description>Background Music Blue</description>
+            <posx>76.5</posx>
+            <posy>345</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="247">
+            <description>Background Music Black</description>
+            <posx>96.5</posx>
+            <posy>344</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30060]</label>
+        </control>
+        
+        <control type="label" id="248">
+            <description>Background Music White</description>
+            <posx>96.5</posx>
+            <posy>344</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30060]</label>
+        </control>
+        
+        <control type="image" id="249">
+            <description>Background Music ON Yellow</description>
+            <posx>730</posx>
+            <posy>345</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="250">
+            <description>Background Music ON Blue</description>
+            <posx>730</posx>
+            <posy>345</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="251">
+            <description>Background Music ON Black</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="252">
+            <description>Background Music ON White</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="253">
+            <description>Background Music OFF Black</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="254">
+            <description>Background Music OFF White</description>
+            <posx>96.5</posx>
+            <posy>348</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="255">
+            <description>Left Arrow Background Music Black</description>
+            <posx>740</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="256">
+            <description>Left Arrow Background Music White</description>
+            <posx>740</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="257">
+            <description>Right Arrow Background Music Black</description>
+            <posx>996</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="258">
+            <description>Right Arrow Background Music White</description>
+            <posx>996</posx>
+            <posy>361</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="259">
+            <description>Beep on error Yellow</description>
+            <posx>76.5</posx>
+            <posy>401</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="260">
+            <description>Beep on error Blue</description>
+            <posx>76.5</posx>
+            <posy>401</posy>
+            <width>606</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="label" id="261">
+            <description>Beep on error Black</description>
+            <posx>96.5</posx>
+            <posy>398</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30061]</label>
+        </control>
+        
+        <control type="label" id="262">
+            <description>Beep on error White</description>
+            <posx>96.5</posx>
+            <posy>398</posy>
+            <width>606</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30061]</label>
+        </control>
+        
+        <control type="image" id="263">
+            <description>Beep on error ON Yellow</description>
+            <posx>730</posx>
+            <posy>401</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="264">
+            <description>Beep on error ON Blue</description>
+            <posx>730</posx>
+            <posy>401</posy>
+            <width>306</width>
+            <height>48</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="265">
+            <description>Beep on error ON Black</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="266">
+            <description>Beep on error ON White</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>200</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30047]</label>
+        </control>
+
+        <control type="label" id="267">
+            <description>Beep on error OFF Black</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="label" id="268">
+            <description>Beep on error OFF White</description>
+            <posx>96.5</posx>
+            <posy>405</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30048]</label>
+        </control>
+
+        <control type="image" id="269">
+            <description>Left Arrow Beep on error Black</description>
+            <posx>740</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="270">
+            <description>Left Arrow Beep on error White</description>
+            <posx>740</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="271">
+            <description>Right Arrow Beep on error Black</description>
+            <posx>996</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="272">
+            <description>Right Arrow Beep on error White</description>
+            <posx>996</posx>
+            <posy>413</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="273">
+            <description>Save Settings Yellow</description>
+            <posx>76.5</posx>
+            <posy>456</posy>
+            <width>606</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="274">
+            <description>Save Settings Blue</description>
+            <posx>76.5</posx>
+            <posy>456</posy>
+            <width>606</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="275">
+            <description>Save Settings Black</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30076]</label>
+        </control>
+
+        <control type="label" id="276">
+            <description>Save Settings White</description>
+            <posx>96.5</posx>
+            <posy>450</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30051]</label>
+        </control>
+        
+        <control type="image" id="277">
+            <description>Reset Button</description>
+            <posx>96.5</posx>
+            <posy>589</posy>
+            <width>356</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="278">
+            <description>Reset All Settings</description>
+            <posx>113.5</posx>
+            <posy>589</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30052]</label>
+        </control>
+
+        <control type="label" id="279">
+            <description>Use < > to switch settings</description>
+            <posx>76.5</posx>
+            <posy>659</posy>
+            <width>650</width>
+            <height>22.5</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30034]</label>
+        </control>
+        
+        <control type="image" id="280">
+            <description>Reset Button Red</description>
+            <posx>76.5</posx>
+            <posy>588</posy>
+            <width>28</width>
+            <height>28</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="image" id="281">
+            <description>Left Right Button Settings</description>
+            <posx>162.5</posx>
+            <posy>658</posy>
+            <width>51</width>
+            <height>28</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="282">
+            <description>Change Language Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30046]</label>
+        </control>
+
+        <control type="image" id="283">
+            <description>Change Language Yellow Box</description>
+            <posx>76.5</posx>
+            <posy>178</posy>
+            <width>556</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="284">
+            <description>Change Language Blue Box</description>
+            <posx>76.5</posx>
+            <posy>178</posy>
+            <width>556</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="285">
+            <description>Change Language Black</description>
+            <posx>96.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30063]</label>
+        </control>
+
+        <control type="label" id="286">
+            <description>Change Language White</description>
+            <posx>96.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30063]</label>
+        </control>
+
+        <control type="image" id="287">
+            <description>Languages Yellow Box</description>
+            <posx>676.5</posx>
+            <posy>178</posy>
+            <width>256</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="288">
+            <description>Languages Blue Box</description>
+            <posx>676.5</posx>
+            <posy>178</posy>
+            <width>256</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+        
+        <control type="image" id="289">
+            <description>Left Arrow Language Black</description>
+            <posx>686</posx>
+            <posy>188</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="290">
+            <description>Left Arrow Language White</description>
+            <posx>686</posx>
+            <posy>188</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="image" id="291">
+            <description>Right Arrow Language Black</description>
+            <posx>900</posx>
+            <posy>188</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+        
+        <control type="image" id="292">
+            <description>Right Arrow Language White</description>
+            <posx>900</posx>
+            <posy>188</posy>
+            <width>14</width>
+            <height>27</height>
+            <visible>true</visible>
+            <texturenofocus></texturenofocus>
+            <label></label>
+            <font></font>
+            <textcolor></textcolor>
+            <focusedcolor></focusedcolor>
+            <disabledcolor></disabledcolor>
+        </control>
+
+        <control type="label" id="293">
+            <description>English Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>middle</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30064]</label>
+        </control>
+
+        <control type="label" id="294">
+            <description>English White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>middle</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30064]</label>
+        </control>
+
+        <control type="label" id="295">
+            <description>French Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30065]</label>
+        </control>
+
+        <control type="label" id="296">
+            <description>French White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30065]</label>
+        </control>
+
+        <control type="label" id="297">
+            <description>German Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30066]</label>
+        </control>
+
+        <control type="label" id="298">
+            <description>German White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30066]</label>
+        </control>
+
+        <control type="label" id="299">
+            <description>Italian Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30067]</label>
+        </control>
+
+        <control type="label" id="300">
+            <description>Italian White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30067]</label>
+        </control>
+
+        <control type="label" id="301">
+            <description>Spainish Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30068]</label>
+        </control>
+
+        <control type="label" id="302">
+            <description>Spainish White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30068]</label>
+        </control>
+
+        <control type="label" id="303">
+            <description>Russian Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30069]</label>
+        </control>
+
+        <control type="label" id="304">
+            <description>Russian White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30069]</label>
+        </control>
+
+        <control type="label" id="305">
+            <description>Portuguese Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30070]</label>
+        </control>
+
+        <control type="label" id="306">
+            <description>Portuguese White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30070]</label>
+        </control>
+
+        <control type="label" id="307">
+            <description>Greek Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30071]</label>
+        </control>
+
+        <control type="label" id="308">
+            <description>Greek White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30071]</label>
+        </control>
+
+        <control type="label" id="309">
+            <description>Dutch Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30072]</label>
+        </control>
+
+        <control type="label" id="310">
+            <description>Dutch White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30072]</label>
+        </control>
+
+        <control type="label" id="311">
+            <description>Chinese Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30073]</label>
+        </control>
+
+        <control type="label" id="312">
+            <description>Chinese White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30073]</label>
+        </control>
+
+        <control type="label" id="313">
+            <description>Korean Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30074]</label>
+        </control>
+
+        <control type="label" id="314">
+            <description>Korean White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30074]</label>
+        </control>
+
+        <control type="label" id="315">
+            <description>Arabic Black</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30075]</label>
+        </control>
+
+        <control type="label" id="316">
+            <description>Arabic White</description>
+            <posx>716.5</posx>
+            <posy>174</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30075]</label>
+        </control>
+
+        <control type="image" id="317">
+          <description>Save Settings Yellow Box</description>
+            <posx>76.5</posx>
+            <posy>233</posy>
+            <width>556</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="318">
+          <description>Save Settings Blue Box</description>
+            <posx>76.5</posx>
+            <posy>233</posy>
+            <width>556</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="319">
+            <description>Language Save Settings Black</description>
+            <posx>96.5</posx>
+            <posy>228</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30076]</label>
+        </control>
+
+        <control type="label" id="320">
+            <description>Language Save Settings White</description>
+            <posx>96.5</posx>
+            <posy>228</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold28</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30076]</label>
+        </control>
+
+        <control type="label" id="321">
+            <description>System Time Yellow</description>
+            <posx>950</posx>
+            <posy>4</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold48</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label></label>
+        </control>
+        
+        <control type="label" id="322">
+            <description>Parental Control Yellow</description>
+            <posx>76.5</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30078]</label>
+        </control>
+
+        <control type="image" id="323">
+            <description>Enter PIN Yellow Box</description>
+            <posx>176.5</posx>
+            <posy>193</posy>
+            <width>896</width>
+            <height>50</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="324">
+            <description>Enter PIN Blue Box</description>
+            <posx>176.5</posx>
+            <posy>235</posy>
+            <width>896</width>
+            <height>186</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="325">
+            <description>Press Parental Control Blue Box</description>
+            <posx>176</posx>
+            <posy>426</posy>
+            <width>896</width>
+            <height>52</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="326">
+            <description>Parental Control Yellow</description>
+            <posx>76</posx>
+            <posy>45</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold100</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30078]</label>
+        </control>
+
+        <control type="label" id="327">
+            <description>PIN Protected Black</description>
+            <posx>492.5</posx>
+            <posy>192</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold60</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30079]</label>
+        </control>
+
+        <control type="label" id="328">
+            <description>Enter PIN White</description>
+            <posx>320</posx>
+            <posy>298</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold90</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30080]</label>
+        </control>
+
+        <control type="image" id="329">
+            <description>Parental Control Press BACK Yellow Image</description>
+            <posx>294</posx>
+            <posy>432</posy>
+            <width>103</width>
+            <height>39</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="330">
+            <description>Press to Cancel White</description>
+            <posx>206</posx>
+            <posy>427</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold60</font>
+            <textcolor>white</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30081]</label>
+        </control>
+
+        <control type="label" id="331">
+            <description>Back Black</description>
+            <posx>304</posx>
+            <posy>428</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_AerialBold48</font>
+            <textcolor>black</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30082]</label>
+        </control>
+
+        <control type="image" id="332">
+            <description>PIN Blank 1</description>
+            <posx>565</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="333">
+            <description>PIN Blank 2</description>
+            <posx>605</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="334">
+            <description>PIN Blank 3</description>
+            <posx>645</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="335">
+            <description>PIN Blank 4</description>
+            <posx>685</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="336">
+            <description>PIN Characters 1</description>
+            <posx>565</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="337">
+            <description>PIN Characters 2</description>
+            <posx>605</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="338">
+            <description>PIN Characters 3</description>
+            <posx>645</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="339">
+            <description>PIN Characters 4</description>
+            <posx>685</posx>
+            <posy>298</posy>
+            <width>40</width>
+            <height>40</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="340">
+            <description>loading splash</description>
+            <posx>600</posx>
+            <posy>250</posy>
+            <width>74</width>
+            <height>74</height>
+            <texture></texture>
+        </control>
+
+        <!-- Tv time bar row -->
+        <control type="image" id="341">
+            <description>Tv Guide time bar</description>
+            <posx>40</posx>
+            <posy>270</posy>
+            <width>1200</width>
+            <height>43</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="342">
+            <description>test today</description>
+            <posx>45</posx>
+            <posy>271</posy>
+            <width>800</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold25</font>
+            <textcolor>0xFFE3B01C</textcolor>
+            <visible>true</visible>
+            <label>$LOCALIZE[SCRIPT30071]</label>
+        </control>
+
+        <control type="label" id="343">
+            <description>loading time left</description>
+            <posx>612</posx>
+            <posy>325</posy>
+            <width>90</width>
+            <height>70</height>
+            <align>middle</align>
+            <font>font15</font>
+            <textcolor>ffffffff</textcolor>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <!-- Date and time row -->
+        <control type="label" id="344">
+            <description>1st half hour column</description>
+            <posx>378</posx>
+            <posy>276</posy>
+            <width>270</width>
+            <height>40</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <visible>true</visible>
+            <align>left</align>
+        </control>
+
+        <control type="label" id="345">
+            <description>2nd half hour column</description>
+            <posx>727</posx>
+            <posy>276</posy>
+            <width>270</width>
+            <height>40</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <visible>true</visible>
+            <align>left</align>
+        </control>
+
+        <control type="label" id="346">
+            <description>3rd half hour column</description>
+            <posx>1074</posx>
+            <posy>276</posy>
+            <width>272</width>
+            <height>40</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <visible>true</visible>
+            <align>left</align>
+        </control>
+        
+        <control type="image" id="347">
+            <description>Channel bar 1</description>
+            <posx>12</posx>
+            <posy>314</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="348">
+            <description>Channel bar 2</description>
+            <posx>12</posx>
+            <posy>352</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="349">
+            <description>Channel bar 3</description>
+            <posx>12</posx>
+            <posy>390</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="350">
+            <description>Channel bar 4</description>
+            <posx>12</posx>
+            <posy>427</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="351">
+            <description>Channel bar 5</description>
+            <posx>12</posx>
+            <posy>465</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="352">
+            <description>Channel bar 6</description>
+            <posx>12</posx>
+            <posy>502</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="353">
+            <description>Channel bar 7</description>
+            <posx>12</posx>
+            <posy>539</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="354">
+            <description>Channel bar 1</description>
+            <posx>12</posx>
+            <posy>314</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="355">
+            <description>Channel bar 2</description>
+            <posx>12</posx>
+            <posy>352</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="356">
+            <description>Channel bar 3</description>
+            <posx>12</posx>
+            <posy>390</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="357">
+            <description>Channel bar 4</description>
+            <posx>12</posx>
+            <posy>427</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="358">
+            <description>Channel bar 5</description>
+            <posx>12</posx>
+            <posy>465</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="359">
+            <description>Channel bar 6</description>
+            <posx>12</posx>
+            <posy>502</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="360">
+            <description>Channel bar 7</description>
+            <posx>12</posx>
+            <posy>539</posy>
+            <width>350</width>
+            <height>33</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <!-- text labels -->
+        <control type="label" id="361">
+            <description>1st channel</description>
+            <posx>16</posx>
+            <posy>307</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>black</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="362">
+            <description>2nd channel</description>
+            <posx>16</posx>
+            <posy>345</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="363">
+            <description>3rd channel</description>
+            <posx>16</posx>
+            <posy>383</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="364">
+            <description>4th channel</description>
+            <posx>16</posx>
+            <posy>420</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="365">
+            <description>5th channel</description>
+            <posx>16</posx>
+            <posy>459</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="366">
+            <description>6th channel</description>
+            <posx>16</posx>
+            <posy>495</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="367">
+            <description>7th channel</description>
+            <posx>16</posx>
+            <posy>532</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+        
+        <!-- text labels -->
+        <control type="label" id="368">
+            <description>1st channel</description>
+            <posx>16</posx>
+            <posy>307</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="369">
+            <description>2nd channel</description>
+            <posx>16</posx>
+            <posy>345</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>black</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="370">
+            <description>3rd channel</description>
+            <posx>16</posx>
+            <posy>383</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>black</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="371">
+            <description>4th channel</description>
+            <posx>16</posx>
+            <posy>420</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>black</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="372">
+            <description>5th channel</description>
+            <posx>16</posx>
+            <posy>459</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>black</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="373">
+            <description>6th channel</description>
+            <posx>16</posx>
+            <posy>495</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>black</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="label" id="374">
+            <description>7th channel</description>
+            <posx>16</posx>
+            <posy>532</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>black</textcolor>
+            <font>Font_Bold25</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label></label>
+        </control>
+
+        <control type="image" id="375">
+            <description>EPG Button bar</description>
+            <posx>12</posx>
+            <posy>579</posy>
+            <width>1242</width>
+            <height>35.5</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="376">
+            <description>EPG Red Button</description>
+            <posx>22</posx>
+            <posy>582</posy>
+            <width>31</width>
+            <height>32</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="377">
+            <description>EPG Green Button</description>
+            <posx>347</posx>
+            <posy>582</posy>
+            <width>31</width>
+            <height>32</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="378">
+            <description>EPG Yellow Button</description>
+            <posx>712</posx>
+            <posy>582</posy>
+            <width>31</width>
+            <height>32</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="379">
+            <description>EPG Blue Button</description>
+            <posx>1024</posx>
+            <posy>582</posy>
+            <width>31</width>
+            <height>32</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="380">
+            <description>Red Page Up</description>
+            <posx>61</posx>
+            <posy>573</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold24</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label>Page Up</label>
+        </control>
+
+        <control type="label" id="381">
+            <description>Green Page Down</description>
+            <posx>387</posx>
+            <posy>573</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold24</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label>Page Down</label>
+        </control>
+
+        <control type="label" id="382">
+            <description>+ 24 hours</description>
+            <posx>745</posx>
+            <posy>573</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold24</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label>+ 24 hours</label>
+        </control>
+
+        <control type="label" id="383">
+            <description>- 24 hours</description>
+            <posx>1060</posx>
+            <posy>573</posy>
+            <width>335</width>
+            <height>45</height>
+            <textcolor>ffffffff</textcolor>
+            <font>Font_Bold24</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label>- 24 hours</label>
+        </control>
+
+        <control type="image" id="384">
+            <description>EPG Press SELECT Button</description>
+            <posx>114</posx>
+            <posy>641.5</posy>
+            <width>108</width>
+            <height>37</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="385">
+            <description>EPG Record Button</description>
+            <posx>330</posx>
+            <posy>641.5</posy>
+            <width>36</width>
+            <height>36</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="image" id="386">
+            <description>EPG Press BACK Button</description>
+            <posx>599</posx>
+            <posy>641.5</posy>
+            <width>84</width>
+            <height>37</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="label" id="387">
+            <description>Channels Select or Record</description>
+            <posx>41</posx>
+            <posy>635.5</posy>
+            <width>1300</width>
+            <height>50</height>
+            <align>left</align>
+            <font>Font_Bold25</font>
+            <textcolor>FFFFFFFFFF</textcolor>
+            <visible>true</visible>
+            <label>Press  SELECT  to view,        to record or Press  BACK  to go back</label>
+        </control>
+
+        <control type="image" id="388">
+            <description>EPG TV Black Screen</description>
+            <posx>822</posx>
+            <posy>45</posy>
+            <width>432</width>
+            <height>225</height>
+            <visible>true</visible>
+            <texture></texture>
+        </control>
+
+        <control type="videowindow">
+            <posx>822</posx>
+            <posy>45</posy>
+            <width>432</width>
+            <height>225</height>
+            <animation type="Conditional" condition="!Control.IsVisible(389)">
+                <effect type="zoom" end="100" center="822,45" time="500" />
+            </animation>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,305 @@
+if self.program_finished == True:
+                     self.program_finished = False
+                     prog_index = [self.program_index_list]
+                     half_hour = str(self.getControl(344).getLabel())
+                     one_hour = str(self.getControl(345).getLabel())
+                     one_hour_half = str(self.getControl(346).getLabel())
+                     epg_time_1 = time.strptime(half_hour, '%I:%M%p')
+                     epg_time_2 = time.strptime(one_hour, '%I:%M%p')
+                     epg_time_3 = time.strptime(one_hour_half, '%I:%M%p')
+
+
+                     #start_date = str(stop_date[0])
+                     print "self.program_id_end_list"
+                     print self.program_id_end_list
+
+
+                     for i in range(len(posX)):
+                         pos_X = posX[i]
+
+                         if pos_X == '375':
+                             self.program_id_end_list.append(progId[i])
+
+
+
+                     if len(prog_index) >= 1:
+                         for index in prog_index[0]:
+                             program_id = self.program_id_end_list[index]
+                             programX = self.getControl(int(program_id)).getX()
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram = int(program_id) + 1
+                             nextprogramX = self.getControl(int(nextprogram)).getX()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             pos_Y = self.getControl(int(program_id)).getY()
+
+
+                             if programX == 375 and program_width == 626:
+
+                                 if nextprogramX != 1008:
+                                     self.getControl(int(nextprogram)).setPosition(1008, int(pos_Y))
+
+
+                                 elif nextprogramX == 1008:
+                                     self.getControl(int(nextprogram)).setPosition(1007, int(pos_Y))
+
+
+
+                             elif programX == 375 and program_width == 692:
+
+                                 if nextprogramX == 1073:
+                                     program_width = 691
+                                     self.getControl(int(program_id)).setWidth(program_width)
+                                     self.getControl(int(nextprogram)).setPosition(1073, int(pos_Y))
+
+
+                                 elif nextprogramX != 1073:
+                                     program_width = 691
+                                     self.getControl(int(program_id)).setWidth(program_width)
+                                     self.getControl(int(nextprogram)).setPosition(1073, int(pos_Y))
+
+
+
+                     for program_end_time in self.program_end_time:
+                         program_stop_hours = str(program_end_time.hour)
+                         program_stop_minutes = str(program_end_time.minute)
+
+                         if program_stop_hours == "0":
+                             program_stop_hours = "12"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "01":
+                             program_stop_hours = "1"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "02":
+                             program_stop_hours = "2"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "03":
+                             program_stop_hours = "3"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "04":
+                             program_stop_hours = "4"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "05":
+                             program_stop_hours = "5"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "06":
+                             program_stop_hours = "6"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "07":
+                             program_stop_hours = "7"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "08":
+                             program_stop_hours = "8"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "09":
+                             program_stop_hours = "9"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "10":
+                             program_stop_hours = "10"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "11":
+                             program_stop_hours = "11"
+                             program_AM_PM = 'AM'
+                         elif program_stop_hours == "12":
+                             program_stop_hours = "12"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "13":
+                             program_stop_hours = "1"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "14":
+                             program_stop_hours = "2"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "15":
+                             program_stop_hours = "3"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "16":
+                             program_stop_hours = "4"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "17":
+                             program_stop_hours = "5"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "18":
+                             program_stop_hours = "6"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "19":
+                             program_stop_hours = "7"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "20":
+                             program_stop_hours = "8"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "21":
+                             program_stop_hours = "9"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "22":
+                             program_stop_hours = "10"
+                             program_AM_PM = 'PM'
+                         elif program_stop_hours == "23":
+                             program_stop_hours = "11"
+                             program_AM_PM = 'PM'
+
+
+                         if program_stop_minutes == "0":
+                             program_stop_minutes = "00"
+
+                         stop_time = str(program_stop_hours + ':' + program_stop_minutes + program_AM_PM)
+                         program_stop_time = time.strptime(stop_time, '%I:%M%p')
+
+
+
+                     if program_stop_time < epg_time_1 or program_stop_time == epg_time_1:
+                         if len(prog_index) >= 1:
+                             for index in prog_index[0]:
+                                 program_id = self.program_id_end_list[index]
+                                 nextprogram = int(program_id) + 1
+                                 program_width = self.getControl(int(program_id)).getWidth()
+                                 nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                                 nextprogram1 = int(nextprogram) + 1
+                                 nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                                 nextprogram2 = int(nextprogram1) + 1
+                                 pos_X = self.getControl(int(program_id)).getX()
+                                 pos_Y = self.getControl(int(program_id)).getY()
+
+                                 if program_width == 167:
+                                     print "you are here 1"
+                                     self.getControl(int(program_id)).setVisible(False)
+                                     self.getControl(int(program_id)).setPosition(int(pos_X) - 350, int(pos_Y))
+                                     self.getControl(int(nextprogram)).setPosition(375, int(pos_Y))
+                                     self.nextprogram_id = list()
+                                     self.nextprogram_id.append(nextprogram)
+                                     self.selct_db()
+
+
+                                 if program_width == 227 and nextprogram_width == 117:
+                                     print "you are here 2"
+                                     self.getControl(int(program_id)).setVisible(False)
+                                     self.getControl(int(program_id)).setPosition(int(pos_X) - 700, int(pos_Y))
+                                     self.getControl(int(nextprogram)).setVisible(False)
+                                     self.getControl(int(nextprogram)).setPosition(int(pos_X) - 350, int(pos_Y))
+                                     self.getControl(int(nextprogram1)).setPosition(375, int(pos_Y))
+
+                                     if nextprogram1_width == 692:
+                                         self.getControl(int(nextprogram2)).setPosition(1073, int(pos_Y))
+                                         self.getControl(int(nextprogram2)).setVisible(True)
+
+
+                                     elif nextprogram1_width == 741:
+                                         self.getControl(int(nextprogram2)).setPosition(1124, int(pos_Y))
+                                         self.getControl(int(nextprogram2)).setVisible(True)
+
+
+
+                                 elif program_width == 626:
+                                     print "you are here 3"
+                                     program_width = 284
+                                     self.getControl(int(program_id)).setWidth(program_width)
+                                     self.getControl(int(program_id)).setVisible(False)
+
+                                     if nextprogram_width == 59:
+                                         self.getControl(int(program_id)).setPosition(int(pos_X) - 700, int(pos_Y))
+                                         self.getControl(int(nextprogram)).setVisible(False)
+                                         self.getControl(int(nextprogram)).setPosition(int(pos_X) - 350, int(pos_Y))
+                                         self.getControl(int(nextprogram1)).setPosition(375, int(pos_Y))
+
+                                         if nextprogram1_width == 692:
+                                             program_width = 691
+                                             self.getControl(int(nextprogram1)).setWidth(program_width)
+                                             self.getControl(int(nextprogram2)).setPosition(1073, int(pos_Y))
+
+                                             #if nextprogram1_stop_time == epg_time_2:
+
+
+                                     else:
+                                         print "you are here 4"
+                                         self.getControl(int(program_id)).setPosition(int(pos_X) - 350, int(pos_Y))
+                                         self.getControl(int(nextprogram)).setPosition(375, int(pos_Y))
+
+
+
+                                 elif program_width >= 691:
+                                     print "you are here 5"
+                                     program_width = 342
+                                     self.getControl(int(program_id)).setWidth(program_width)
+                                     self.getControl(int(program_id)).setVisible(False)
+                                     self.getControl(int(nextprogram)).setPosition(375, int(pos_Y))
+                                     self.nextprogram_id = list()
+                                     self.nextprogram_id.append(nextprogram)
+                                     self.selct_db()
+
+                                     if nextprogram_width == 167:
+                                         self.getControl(int(nextprogram1)).setPosition(549, int(pos_Y))
+
+
+                                     elif nextprogram_width == 567:
+                                         self.getControl(int(nextprogram1)).setPosition(949, int(pos_Y))
+
+                                         if nextprogram1_width == 117:
+                                             self.getControl(int(nextprogram2)).setPosition(1073, int(pos_Y))
+
+
+                                     elif nextprogram_width == 626:
+                                         self.getControl(int(nextprogram1)).setPosition(1007, int(pos_Y))
+
+                                         if nextprogram1_width == 59:
+                                             self.getControl(int(nextprogram2)).setPosition(1073, int(pos_Y))
+                                             self.getControl(int(nextprogram2)).setVisible(True)
+
+
+                                     elif nextprogram_width == 692:
+                                         program_width = 691
+                                         self.getControl(int(nextprogram)).setWidth(program_width)
+                                         self.getControl(int(nextprogram1)).setPosition(1073, int(pos_Y))
+
+
+
+             program_buttons = [elem.control for elem in self.program_buttons]
+             program_id = list()
+
+
+             for elem in program_buttons:
+                 program_id.append(elem.getId())
+             prog_id = map(str, program_id)
+             profilePath = xbmc.translatePath(os.path.join('special://userdata/addon_data/script.tvguide', 'source.db'))
+             conn7 = database.connect(profilePath)
+             cur7 = conn7.cursor()
+             cur7.execute("DELETE FROM programs")
+
+
+             if len(self.program_buttons) > 0:
+                 program_X = programs_button[0].getX()
+                 program_width = programs_button[0].getWidth()
+                 nextprogram_X = programs_button[1].getX()
+                 nextprogram_width = programs_button[1].getWidth()
+                 nextprogram1_X = programs_button[2].getX()
+
+                 if program_X < 375:
+                     if program_width == 227:
+                         if nextprogram_width == 117:
+                             self.setFocus(programs_button[2])
+                         else:
+                             self.setFocus(programs_button[1])
+
+                     else:
+                         print "you are here 0"
+                         if nextprogram_width >= 227:
+                             print "you are here 1"
+                             #self.setFocus(programs_button[1])
+
+
+                 else:
+                     if nextprogram_X == 375:
+                         self.setFocus(programs_button[1])
+                     elif nextprogram1_X == 375:
+                         self.setFocus(programs_button[2])
+                     elif program_X == 375:
+                         self.setFocus(programs_button[0])
+
+                 self.programs_Index = 0
+                 self.channelsOnLeft = True
+             xbmc.sleep(300)
+
+
+             #store the id and width of buttons in a database
+             for button_id, title, channel_name, start_time, stop_time, prog_width in izip_longest(prog_id, title_list, channels_list, start_time_list, stop_time_list, programs_width, fillvalue=''):
+                 cur7.execute("INSERT INTO programs(channel, title, start_date, stop_date, button_id)" + " VALUES(?, ?, ?, ?, ?)", [channel_name, title, start_time, stop_time, button_id])
+                 cur7.execute("INSERT INTO buttons(button_ids, button_width)" + " VALUES(?, ?)", [button_id, prog_width])
+             conn7.commit()
+             conn7.close()

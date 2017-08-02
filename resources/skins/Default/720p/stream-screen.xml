@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <control type="videowindow">
+        <description>VideoWindow Box Art</description>
+        <posx>822</posx>
+        <posy>45</posy>
+        <width>432</width>
+        <height>225</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <aspectratio>keep</aspectratio>
+        <visible>true</visible>
+    </control>
+</window>

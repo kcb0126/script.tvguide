@@ -1,0 +1,1169 @@
+import datetime
+import time
+import xbmc
+import xbmcgui
+import os
+from sqlite3 import dbapi2 as database
+
+
+def get_programming_times(self):
+     #global self.program_stop_minutes, self.program_stop_time, self.epg_time_1, self.epg_time_2, self.epg_time_3
+     print "you are now calling the get_programming_times function now chrisssssssssssssssss"
+
+     if self.select_db_flag == True:
+         self.select_db_flag = False
+         program_id = ''.join(str(x) for x in self.program_id)
+         print "program_id"
+         print program_id
+
+         profilePath = xbmc.translatePath(os.path.join('special://userdata/addon_data/script.tvguide', 'source.db'))
+         conn1 = database.connect(profilePath)
+         cur1 = conn1.cursor()
+         cur1.execute('SELECT stop_date FROM programs where program_id=?', [program_id])
+         data = cur1.fetchone()
+
+         if data is not None:
+             stop_date = str(data[0])
+             stop_time = time.strptime(str(stop_date), '%Y%m%d%H%M%S')
+             stop_time = datetime.datetime.fromtimestamp(time.mktime(stop_time))
+             self.program_stop_time.append(stop_time)
+             print "stop_time timestamp"
+             print stop_time
+     
+     
+     
+
+
+     #for pos_X, pos_Y, prog_id, prog_width in zip(positions_X, positions_Y, programs_id, program_width):
+         #if self.select_db_flag == True:
+             #self.select_db_flag = False
+             #profilePath = xbmc.translatePath(os.path.join('special://userdata/addon_data/script.tvguide', 'source.db'))
+             #conn1 = database.connect(profilePath)
+             #cur1 = conn1.cursor()
+             #cur1.execute('SELECT stop_date FROM programs where program_id=?', [program_id])
+             #stop_date = cur1.fetchone()
+
+             #if stop_date is not None:
+                 #stop_date = str(stop_date[0])
+                 #stop_time = time.strptime(str(stop_date), '%Y%m%d%H%M%S')
+                 #stop_time = datetime.datetime.fromtimestamp(time.mktime(stop_time))
+                 #program_stop_hours = stop_time.strftime('%H')
+                 #self.program_stop_minutes = stop_time.strftime('%M')
+                 #program_AM_PM = stop_time.strftime('%p')
+                 #half_hour = str(self.getControl(344).getLabel())
+                 #one_hour = str(self.getControl(345).getLabel())
+                 #one_hour_half = str(self.getControl(346).getLabel())
+                 #self.epg_time_1 = time.strptime(half_hour, '%I:%M%p')
+                 #self.epg_time_2 = time.strptime(one_hour, '%I:%M%p')
+                 #self.epg_time_3 = time.strptime(one_hour_half, '%I:%M%p')
+
+                 #program_stop_time = time.strptime(stop_date, '%Y%m%d%H%M%S')
+                 #program_stop_time = datetime.datetime.fromtimestamp(time.mktime(program_stop_time))
+
+
+                 #program_stop_time = program_stop_hours +':' + self.program_stop_minutes + program_AM_PM
+                 #program_stop_time = time.strptime(program_stop_time, '%I:%M%p')
+                 #self.program_stop_time.append(program_stop_time)
+
+
+         #return self.program_stop_minutes, self.program_stop_time
+
+
+
+
+def GoRight(self):
+     print "self.move_right_flag"
+     print self.move_right_flag
+
+
+     # change program controls to display the proper junks
+     if self.channels_Index != len(self.program_buttons) - 1:
+         if self.channel_page >= 0:
+             CurrentId = self.getFocusId()
+             CurrentRow = self.getControl(CurrentId).getX()
+             CurrentRowY = self.getControl(CurrentId).getY()
+             CurrentWidth = self.getControl(CurrentId).getWidth()
+             epg_time_1 = ''.join(str(x) for x in self.epg_time_1)
+             epg_time_2 = ''.join(str(x) for x in self.epg_time_2)
+             epg_time_3 = ''.join(str(x) for x in self.epg_time_1)
+             pixel_start = 375
+             pixel_middle = 724
+             pixel_end = 1073
+
+
+             if self.move_right_flag == False:
+                 if self.channel_page == 15750:
+                     pass
+             else:
+                 if CurrentRow:
+                     program_button = [elem.control for elem in self.program_buttons]
+                     programs_id = list()
+                     positions_X = list()
+                     epg_time_1 = ''.join(str(x) for x in self.epg_time_1)
+                     epg_time_2 = ''.join(str(x) for x in self.epg_time_2)
+                     epg_time_3 = ''.join(str(x) for x in self.epg_time_3)
+
+                     for elem in program_button:
+                         programs_id.append(elem.getId())
+                         positions_X.append(elem.getX())
+                     programs_id = map(str, programs_id)
+                     posX = map(str, positions_X)
+
+
+                     #Store the list of strings in the lists
+                     for i in range(len(posX)):
+                         pos_X = posX[i]
+
+                         if pos_X == '375':
+                             self.program_id.append(programs_id[i])
+
+
+                     #Time to connect to the database
+                     #self.select_db_flag = True
+                     #get_programming_times(self)
+                     print "self.program_id"
+                     print self.program_id
+                     
+
+
+
+                     for program_id in self.program_id:
+                         #program_id = int(program_id)
+                         ctrl = self.getControl(int(program_id))
+                         program_width = ctrl.getWidth()
+                         programX = ctrl.getX()
+                         pos_X = ctrl.getX()
+                         pos_Y = ctrl.getY()
+                         nextprogram = int(program_id) + 1
+                         nextprogramX = self.getControl(int(nextprogram)).getX()
+                         nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                         nextprogram_label = self.getControl(int(nextprogram)).getLabel()
+                         nextprogram1 = int(nextprogram) + 1
+                         nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                         nextprogram1_label = self.getControl(int(nextprogram1)).getLabel()
+                         nextprogram2 = int(nextprogram1) + 1
+                         nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                         nextprogram2_label = self.getControl(int(nextprogram2)).getLabel()
+                         nextprogram3 = int(nextprogram2) + 1
+                         nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+                         nextprogram3_label = self.getControl(int(nextprogram3)).getLabel()
+                         nextprogram4 = int(nextprogram3) + 1
+                         nextprogram4_width = self.getControl(int(nextprogram4)).getWidth()
+                         nextprogram4_label = self.getControl(int(nextprogram4)).getLabel()
+                         nextprogram5 = int(nextprogram4) + 1
+                         nextprogram5_width = self.getControl(int(nextprogram5)).getWidth()
+                         nextprogram5_label = self.getControl(int(nextprogram5)).getLabel()
+                         nextprogram6 = int(nextprogram5) + 1
+                         nextprogram6_width = self.getControl(int(nextprogram6)).getWidth()
+                         nextprogram6_label = self.getControl(int(nextprogram6)).getLabel()
+                         nextprogram7 = int(nextprogram6) + 1
+                         nextprogram7_width = self.getControl(int(nextprogram7)).getWidth()
+                         nextprogram7_label = self.getControl(int(nextprogram7)).getLabel()
+                         nextprogram8 = int(nextprogram7) + 1
+                         nextprogram8_width = self.getControl(int(nextprogram8)).getWidth()
+                         nextprogram8_label = self.getControl(int(nextprogram8)).getLabel()
+
+                         #program_width = self.getControl(int(program_id)).getWidth()
+                         #programX = self.getControl(int(program_id)).getX()
+                         #pos_X = self.getControl(int(program_id)).getX()
+                         #pos_Y = self.getControl(int(program_id)).getY()
+                         #nextprogram = int(program_id) + 1
+                         #nextprogramX = self.getControl(int(nextprogram)).getX()
+                         #nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                         #nextprogram_label = self.getControl(int(nextprogram)).getLabel()
+                         #nextprogram1 = int(nextprogram) + 1
+                         #nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                         #nextprogram1_label = self.getControl(int(nextprogram1)).getLabel()
+                         #nextprogram2 = int(nextprogram1) + 1
+                         #nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                         #nextprogram2_label = self.getControl(int(nextprogram2)).getLabel()
+                         #nextprogram3 = int(nextprogram2) + 1
+                         #nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+                         #nextprogram3_label = self.getControl(int(nextprogram3)).getLabel()
+                         #nextprogram4 = int(nextprogram3) + 1
+                         #nextprogram4_width = self.getControl(int(nextprogram4)).getWidth()
+                         #nextprogram4_label = self.getControl(int(nextprogram4)).getLabel()
+                         #nextprogram5 = int(nextprogram4) + 1
+                         #nextprogram5_width = self.getControl(int(nextprogram5)).getWidth()
+                         #nextprogram5_label = self.getControl(int(nextprogram5)).getLabel()
+                         #nextprogram6 = int(nextprogram5) + 1
+                         #nextprogram6_width = self.getControl(int(nextprogram6)).getWidth()
+                         #nextprogram6_label = self.getControl(int(nextprogram6)).getLabel()
+                         #nextprogram7 = int(nextprogram6) + 1
+                         #nextprogram7_width = self.getControl(int(nextprogram7)).getWidth()
+                         #nextprogram7_label = self.getControl(int(nextprogram7)).getLabel()
+                         #nextprogram8 = int(nextprogram7) + 1
+                         #nextprogram8_width = self.getControl(int(nextprogram8)).getWidth()
+                         #nextprogram8_label = self.getControl(int(nextprogram8)).getLabel()
+                         #nextprogram9 = int(nextprogram8) + 1
+                         #nextprogram9_width = self.getControl(int(nextprogram9)).getWidth()
+                         #nextprogram9_label = self.getControl(int(nextprogram9)).getLabel()
+
+
+                         CurrentRowID = self.getFocusId()
+                         CurrentRow = self.getControl(CurrentRowID).getX()
+                         CurrentWidth = self.getControl(CurrentRowID).getWidth()
+
+
+                         if int(programX) == 375 and int(program_width) >= 1191 and int(program_width) <= 1197:
+                             program_width = 857
+                             self.getControl(int(program_id)).setWidth(int(program_width))
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             print "you are working on 1197"
+
+                             if int(program_width) == 857:
+                                 self.getControl(int(nextprogram)).setPosition(1238, int(pos_Y))
+
+
+
+                         elif int(programX) == 375 and int(program_width) == 1124:
+                             programs_width = 691
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+
+
+
+                         elif int(programX) == 375 and int(program_width) == 1083:
+                             programs_width = 626
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+
+
+
+                         elif int(programX) == 375 and int(program_width) >= 1026 and int(program_width) <= 1038:
+                             program_width = 691
+                             self.getControl(int(program_id)).setWidth(int(program_width))
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             print "you are working on 1026"
+
+                             if int(program_width) == 691:
+                                 self.getControl(int(nextprogram)).setPosition(1072, int(pos_Y))
+
+
+
+                         if int(programX) == 375 and int(program_width) == 969:
+                             programs_width = 626
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+
+
+
+
+                         if int(programX) == 375 and int(program_width) == 879:
+                             programs_width = 516
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+
+
+
+                         if int(programX) == 375 and int(program_width) == 847:
+                             programs_width = 515
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+
+
+
+                         if int(programX) == 375 and int(program_width) >= 804 and int(program_width) <= 814:
+                             programs_width = 456
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+                             print "you are working on 814"
+
+
+
+                         if int(programX) == 375 and int(program_width) >= 741 and int(program_width) <= 757:
+                             print "you are working on 741 and 757"
+                             programs_width = 399
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+
+                             if int(programs_width) == 399:
+                                 self.getControl(int(nextprogram)).setPosition(782, int(pos_Y))
+
+
+
+                         elif int(programX) == 375 and int(program_width) == 691:
+                             programs_width = 344
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             print "you are working on 691"
+
+                             if int(program_width) >= 342 and int(program_width) <= 344:
+                                 self.getControl(int(nextprogram)).setPosition(724, int(pos_Y))
+
+                                 if int(nextprogram_width) == 167:
+                                     self.getControl(int(nextprogram1)).setPosition(897, int(pos_Y))
+
+                                     if int(nextprogram1_width) == 117:
+                                         self.getControl(int(nextprogram2)).setPosition(1020, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 227:
+                                     nextprogram_width = 228
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 228:
+                                         self.getControl(int(nextprogram1)).setPosition(959, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 117:
+                                             nextprogram1_width = 107
+                                             self.getControl(int(nextprogram1)).setWidth(int(nextprogram1_width))
+
+                                             if int(nextprogram1_width) == 107:
+                                                     self.getControl(int(nextprogram2)).setPosition(1072, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) >= 342 and int(nextprogram_width) <= 344:
+                                     nextprogram_width = 342
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 342:
+                                         self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 117:
+                                             self.getControl(int(nextprogram2)).setPosition(1196, int(pos_Y))
+
+
+                                         elif int(nextprogram1_width) == 167:
+                                             self.getControl(int(nextprogram2)).setPosition(1246, int(pos_Y))
+
+
+
+
+
+
+                                 elif int(program_width) == 691:
+                                     self.getControl(int(nextprogram)).setPosition(1072, int(pos_Y))
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) >= 625 and int(program_width) <= 630:
+                             self.program_id = list()
+                             self.program_id.append(program_id)
+                             self.select_db_flag = True
+                             get_programming_times(self)
+                             #self.program_stop_time = get_programming_times(self)
+                             #epg_time_2 = ''.join(str(x) for x in self.epg_time_2)
+                             #program_stop_time = ''.join(str(x) for x in self.program_stop_time)
+                             print "you are now working on 625 code now chrisssssssssssssssssssssssssssss 1"
+
+                             #if program_stop_time > epg_time_2:
+                                 #print "it is now time to pass now chrisssssssssssssssssssssssss"
+                             #else:
+                                 #print "it is now time to write the code for 625 now chrisssssssssssssssssssssssss 2"
+                             #program_width = 277
+                             #self.getControl(int(program_id)).setWidth(int(program_width))
+                             #nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             #nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             #nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             #nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+
+                             #if int(program_width) == 277:
+                                 #self.getControl(int(nextprogram)).setPosition(659, int(pos_Y))
+
+                                 #if int(nextprogram_width) == 56:
+                                     #nextprogram_width = 59
+                                     #self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+                                     #print "catch this one now chrissssssssssssssssssssssssssssssss"
+
+                                     #if int(nextprogram_width) == 59:
+                                         #self.getControl(int(nextprogram1)).setPosition(724, int(pos_Y))
+
+                                         #if int(nextprogram1_width) == 344:
+                                             #nextprogram1_width = 342
+                                             #self.getControl(int(nextprogram1)).setWidth(int(nextprogram1_width))
+
+                                             #if int(nextprogram1_width) == 342:
+                                                     #self.getControl(int(nextprogram2)).setPosition(1072, int(pos_Y))
+
+
+
+
+                         if int(programX) == 375 and int(program_width) == 577:
+                             program_width = 167
+                             self.getControl(int(program_id)).setWidth(int(program_width))
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+
+                             if int(program_width) == 167:
+                                 self.getControl(int(nextprogram)).setPosition(549, int(pos_Y))
+
+                                 if int(nextprogram_width) == 59:
+                                     self.getControl(int(nextprogram1)).setPosition(610, int(pos_Y))
+
+
+                                 elif int(nextprogram_width) == 172:
+                                     nextprogram_width = 167
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 167:
+                                         self.getControl(int(nextprogram1)).setPosition(783, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 117:
+                                             nextprogram1_width = 108
+                                             self.getControl(int(nextprogram1)).setWidth(int(nextprogram1_width))
+
+                                             if int(nextprogram1_width) == 108:
+                                                     self.getControl(int(nextprogram2)).setPosition(897, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 344:
+                                     nextprogram_width = 342
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 342:
+                                         self.getControl(int(nextprogram1)).setPosition(959, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 515:
+                                     nextprogram_width = 516
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 516:
+                                         self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 567:
+                                     nextprogram_width = 570
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 570:
+                                         self.getControl(int(nextprogram1)).setPosition(1125, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 59:
+                                             nextprogram1_width = 41
+                                             self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                             if int(nextprogram_width) == 41:
+                                                     self.getControl(int(nextprogram1)).setPosition(1175, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 626:
+                                     nextprogram_width = 629
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 629:
+                                         self.getControl(int(nextprogram1)).setPosition(1246, int(pos_Y))
+
+
+
+
+                         if int(programX) == 375 and int(program_width) == 567:
+                             print "fix this goright 1"
+                             programs_width = 232
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+
+
+
+                         elif int(programX) == 375 and int(program_width) >= 515 and int(program_width) <= 517:
+                             print "you are working on 515 and 517"
+                             programs_width = 167
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+
+                             if int(program_width) == 167:
+                                 self.getControl(int(nextprogram)).setPosition(549, int(pos_Y))
+
+                                 if int(nextprogram_width) == 56:
+                                     nextprogram_width = 53
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 53:
+                                         self.getControl(int(nextprogram1)).setPosition(609, int(pos_Y))
+
+
+                                 elif int(nextprogram_width) == 515:
+                                     self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+                             elif int(program_width) == 692:
+                                 program_width = 691
+                                 self.getControl(int(program_id)).setWidth(int(program_width))
+
+                                 if int(program_width) == 691:
+                                     self.getControl(int(nextprogram)).setPosition(1246, int(pos_Y))
+
+
+
+
+                         if int(programX) == 375 and int(program_width) >= 450 and int(program_width) <= 456:
+                             programs_width = 117
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+
+                             if int(program_width) == 117:
+                                 self.getControl(int(nextprogram)).setPosition(499, int(pos_Y))
+
+                                 if int(nextprogram_width) == 53:
+                                     nextprogram_width = 59
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 59:
+                                         self.getControl(int(nextprogram1)).setPosition(565, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 396:
+                                             nextprogram1_width = 389
+                                             self.getControl(int(nextprogram1)).setWidth(int(nextprogram1_width))
+
+                                             if int(nextprogram1_width) == 389:
+                                                     self.getControl(int(nextprogram1)).setPosition(959, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 567:
+                                     nextprogram_width = 565
+                                     self.getControl(int(nextprogram1)).setWidth(int(nextprogram1_width))
+
+                                     if int(nextprogram_width) == 565:
+                                         self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 626:
+                                     nextprogram_width = 633
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 633:
+                                         self.getControl(int(nextprogram1)).setPosition(1138, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 117:
+                                             self.getControl(int(nextprogram2)).setPosition(1263, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 691:
+                                     nextprogram_width = 692
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 692:
+                                         self.getControl(int(nextprogram1)).setPosition(1197, int(pos_Y))
+
+
+
+
+                         if int(programX) == 375 and int(program_width) >= 399 and int(program_width) <= 408:
+                             programs_width = 59
+                             self.getControl(int(program_id)).setWidth(int(programs_width))
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+
+                             if int(programs_width) == 59:
+                                 self.getControl(int(nextprogram)).setPosition(441, int(pos_Y))
+
+                                 if int(nextprogram_width) == 41:
+                                     nextprogram_width = 53
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 53:
+                                         self.getControl(int(nextprogram1)).setPosition(509, int(pos_Y))
+
+                                         if int(nextprogram1_width) > 691:
+                                             self.getControl(int(nextprogram2)).setPosition(1572, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 276:
+                                     nextprogram_width = 277
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 277:
+                                         self.getControl(int(nextprogram1)).setPosition(724, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 344:
+                                             nextprogram1_width = 342
+                                             self.getControl(int(nextprogram1)).setWidth(int(nextprogram1_width))
+
+                                             if int(nextprogram1_width) == 342:
+                                                     self.getControl(int(nextprogram2)).setPosition(1072, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 342:
+                                      self.getControl(int(nextprogram1)).setPosition(790, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 567:
+                                     nextprogram_width = 562
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 562:
+                                         self.getControl(int(nextprogram1)).setPosition(1007, int(pos_Y))
+
+                                         if int(nextprogram1_width) == 59:
+                                             self.getControl(int(nextprogram2)).setPosition(1072, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 626:
+                                      self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) >= 342 and int(program_width) <= 344:
+                             print "you are working on 342 and 344 button"
+                             self.getControl(int(program_id)).setLabel(nextprogram_label)
+                             self.getControl(int(program_id)).setWidth(nextprogram_width)
+                             self.getControl(int(nextprogram)).setLabel(nextprogram1_label)
+                             self.getControl(int(nextprogram)).setWidth(nextprogram1_width)
+                             self.getControl(int(nextprogram1)).setLabel(nextprogram2_label)
+                             self.getControl(int(nextprogram1)).setWidth(nextprogram2_width)
+                             self.getControl(int(nextprogram2)).setLabel(nextprogram3_label)
+                             self.getControl(int(nextprogram2)).setWidth(nextprogram3_width)
+                             self.getControl(int(nextprogram3)).setLabel(nextprogram4_label)
+                             self.getControl(int(nextprogram3)).setWidth(nextprogram4_width)
+                             self.getControl(int(nextprogram4)).setLabel(nextprogram5_label)
+                             self.getControl(int(nextprogram4)).setWidth(nextprogram5_width)
+                             self.getControl(int(nextprogram5)).setLabel(nextprogram6_label)
+                             self.getControl(int(nextprogram5)).setWidth(nextprogram6_width)
+                             self.getControl(int(nextprogram6)).setLabel(nextprogram7_label)
+                             self.getControl(int(nextprogram6)).setWidth(nextprogram7_width)
+                             self.getControl(int(nextprogram7)).setLabel(nextprogram8_label)
+                             self.getControl(int(nextprogram7)).setWidth(nextprogram8_width)
+                             #self.getControl(int(nextprogram8)).setLabel(nextprogram9_label)
+                             #self.getControl(int(nextprogram8)).setWidth(nextprogram9_width)
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+
+
+                             #if int(program_id) == int(get_id):
+                                 #cur.execute('UPDATE programs SET program_id=? WHERE program_id=?', ['', program_id])
+                                 #print "you have set program_id to empty"
+                                 #program_id = int(program_id) + 1
+                                 #print program_id
+                                 #cur.execute('UPDATE programs SET program_id=? WHERE program_id=?', ['3001', '3002'])
+                                 #con.commit()
+                                 #print "let update the database 1"
+
+
+                             if int(program_width) >= 342 and int(program_width) <= 344:
+                                 program_width = 344
+                                 self.getControl(int(program_id)).setWidth(int(program_width))
+
+                                 if int(program_width) == 344:
+                                     self.getControl(int(nextprogram)).setPosition(724, int(pos_Y))
+
+                                     if int(nextprogram_width) == 167:
+                                         self.getControl(int(nextprogram1)).setPosition(897, int(pos_Y))
+
+                                         if int(nextprogram1_width) >= 515:
+                                             self.getControl(int(nextprogram2)).setPosition(1412, int(pos_Y))
+
+
+                                     elif int(nextprogram_width) >= 342 and int(nextprogram_width) <= 344:
+                                         if int(program_width) >= 342 and int(program_width) <= 344 and int(nextprogram_width) >= 342 and int(nextprogram_width) <= 344:
+                                             nextprogram_width = 342
+                                             self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+                                             print "you are here in 344 chris"
+
+                                             if int(nextprogram_width) == 342:
+                                                         self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+
+                                     elif int(nextprogram_width) == 408:
+                                         self.getControl(int(nextprogram1)).setPosition(787, int(pos_Y))
+                                         print "you are in 408"
+
+                                         if int(nextprogram1_width) == 691:
+                                             self.getControl(int(nextprogram2)).setPosition(1482, int(pos_Y))
+
+
+
+                                     elif int(nextprogram_width) == 515:
+                                         self.getControl(int(nextprogram1)).setPosition(1246, int(pos_Y))
+
+
+
+                                     elif int(nextprogram_width) == 626:
+                                         self.getControl(int(nextprogram1)).setPosition(1419, int(pos_Y))
+
+
+
+                                     elif int(nextprogram_width) >= 691:
+                                         self.getControl(int(nextprogram1)).setPosition(1419, int(pos_Y))
+
+
+
+                             elif int(program_width) == 167:
+                                 self.getControl(int(nextprogram)).setPosition(549, int(pos_Y))
+
+                                 if int(nextprogram_width) == 342:
+                                     self.getControl(int(nextprogram1)).setPosition(897, int(pos_Y))
+
+                                     if int(nextprogram1_width) == 691:
+                                         self.getControl(int(nextprogram1)).setPosition(1592, int(pos_Y))
+
+
+
+                                 elif int(nextprogram_width) == 691:
+                                     self.getControl(int(nextprogram1)).setPosition(1246, int(pos_Y))
+
+
+
+
+                             elif int(program_width) == 228:
+                                 self.getControl(int(nextprogram)).setPosition(610, int(pos_Y))
+
+                                 if int(nextprogram_width) == 107:
+                                     self.getControl(int(nextprogram1)).setPosition(724, int(pos_Y))
+
+                                     if int(nextprogram1_width) == 456:
+                                         self.getControl(int(nextprogram2)).setPosition(1186, int(pos_Y))
+
+
+
+                             elif int(program_width) == 408:
+                                 self.getControl(int(nextprogram)).setPosition(787, int(pos_Y))
+
+
+
+                             elif int(program_width) == 456:
+                                 self.getControl(int(nextprogram)).setPosition(837, int(pos_Y))
+
+                                 if int(nextprogram_width) >= 1197:
+                                     self.getControl(int(nextprogram1)).setPosition(1572, int(pos_Y))
+
+
+
+                             elif int(program_width) == 515:
+                                 self.getControl(int(nextprogram)).setPosition(897, int(pos_Y))
+
+                                 if int(nextprogram_width) == 59:
+                                     nextprogram_width = 56
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 56:
+                                         self.getControl(int(nextprogram1)).setPosition(959, int(pos_Y))
+
+
+                                 elif int(nextprogram_width) >= 1197:
+                                     self.getControl(int(nextprogram1)).setPosition(1572, int(pos_Y))
+
+
+
+                             elif int(program_width) == 567:
+                                 self.getControl(int(nextprogram)).setPosition(949, int(pos_Y))
+
+
+
+                             elif int(program_width) == 626:
+                                 program_width = 627
+                                 self.getControl(int(program_id)).setWidth(int(program_width))
+                                 print "you are in the 627 area for channel 4 chris"
+
+                                 if int(program_width) == 627:
+                                     self.getControl(int(nextprogram)).setPosition(1009, int(pos_Y))
+
+                                     if int(nextprogram_width) == 59:
+                                         nextprogram_width = 56
+                                         self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                         if int(nextprogram_width) == 56:
+                                             self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+
+                             elif int(program_width) >= 691 and int(program_width) <= 692:
+                                 program_width = 691
+                                 self.getControl(int(program_id)).setWidth(int(program_width))
+
+                                 if int(program_width) == 691:
+                                     self.getControl(int(nextprogram)).setPosition(1072, int(pos_Y))
+
+
+
+                             elif int(program_width) >= 741:
+                                 self.getControl(int(nextprogram)).setPosition(1124, int(pos_Y))
+                                     
+                                     
+                                     
+                             elif int(program_width) > 1072:
+                                 self.getControl(int(nextprogram)).setPosition(1618, int(pos_Y))
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) == 286:
+                             print "you are working on 286"
+                             self.getControl(int(program_id)).setLabel(nextprogram_label)
+                             self.getControl(int(program_id)).setWidth(nextprogram_width)
+                             self.getControl(int(nextprogram)).setLabel(nextprogram1_label)
+                             self.getControl(int(nextprogram)).setWidth(nextprogram1_width)
+                             self.getControl(int(nextprogram1)).setLabel(nextprogram2_label)
+                             self.getControl(int(nextprogram1)).setWidth(nextprogram2_width)
+                             self.getControl(int(nextprogram2)).setLabel(nextprogram3_label)
+                             self.getControl(int(nextprogram2)).setWidth(nextprogram3_width)
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+                             print "program_width"
+                             print program_width
+
+                             if int(program_width) == 286:
+                                 print "here 1"
+                                 
+                             elif int(program_width) == 344:
+                                 print "here 2"
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) >= 276 and int(program_width) <= 278:
+                             print "you are working on 276 and 278"
+                             self.getControl(int(program_id)).setLabel(nextprogram_label)
+                             self.getControl(int(program_id)).setWidth(nextprogram_width)
+                             self.getControl(int(nextprogram)).setLabel(nextprogram1_label)
+                             self.getControl(int(nextprogram)).setWidth(nextprogram1_width)
+                             self.getControl(int(nextprogram1)).setLabel(nextprogram2_label)
+                             self.getControl(int(nextprogram1)).setWidth(nextprogram2_width)
+                             self.getControl(int(nextprogram2)).setLabel(nextprogram3_label)
+                             self.getControl(int(nextprogram2)).setWidth(nextprogram3_width)
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+                             print "program_width"
+                             print program_width
+
+                             if int(program_width) == 59:
+                                 print "you are in the 59 for 277 now"
+                                 self.getControl(int(nextprogram)).setPosition(441, int(pos_Y))
+
+                                 if int(nextprogram_width) == 691:
+                                     self.getControl(int(nextprogram1)).setPosition(1138, int(pos_Y))
+
+                                     if int(nextprogram1_width) == 59:
+                                         self.getControl(int(nextprogram2)).setPosition(1201, int(pos_Y))
+
+
+
+                             elif int(program_width) > 1072:
+                                 self.getControl(int(nextprogram)).setPosition(1618, int(pos_Y))
+
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) >= 228 and int(program_width) <= 235:
+                             print "you are working on the 228"
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+
+                             if int(program_width) == 228 and int(nextprogram_width) == 108:
+                                 self.getControl(int(program_id)).setLabel(nextprogram1_label)
+                                 self.getControl(int(program_id)).setWidth(nextprogram1_width)
+                                 self.getControl(int(nextprogram)).setLabel(nextprogram2_label)
+                                 self.getControl(int(nextprogram)).setWidth(nextprogram2_width)
+                                 self.getControl(int(nextprogram1)).setLabel(nextprogram3_label)
+                                 self.getControl(int(nextprogram1)).setWidth(nextprogram3_width)
+                                 program_width = self.getControl(int(program_id)).getWidth()
+                                 nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                                 nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                                 nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                                 nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+
+                                 if int(program_width) == 459:
+                                     program_width = 456
+                                     self.getControl(int(program_id)).setWidth(program_width)
+
+                                     if int(program_width) == 456:
+                                         self.getControl(int(nextprogram)).setPosition(837, int(pos_Y))
+
+                                         if int(nextprogram_width) > 691:
+                                             self.getControl(int(nextprogram1)).setPosition(1572, int(pos_Y))
+                                             self.getControl(int(nextprogram2)).setPosition(1874, int(pos_Y))
+                                             self.getControl(int(nextprogram3)).setPosition(2216, int(pos_Y))
+
+
+                             else:
+                                 self.getControl(int(program_id)).setLabel(nextprogram_label)
+                                 self.getControl(int(program_id)).setWidth(nextprogram_width)
+                                 self.getControl(int(nextprogram)).setLabel(nextprogram1_label)
+                                 self.getControl(int(nextprogram)).setWidth(nextprogram1_width)
+                                 self.getControl(int(nextprogram1)).setLabel(nextprogram2_label)
+                                 self.getControl(int(nextprogram1)).setWidth(nextprogram2_width)
+                                 self.getControl(int(nextprogram2)).setLabel(nextprogram3_label)
+                                 self.getControl(int(nextprogram2)).setWidth(nextprogram3_width)
+
+
+                                 if int(program_width) == 167:
+                                     print "you are in the 228 number 1"
+                                     self.getControl(int(nextprogram)).setPosition(549, int(pos_Y))
+
+                                     if int(nextprogram_width) == 108:
+                                         nextprogram_width = 118
+                                         self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                         if int(nextprogram_width) == 118:
+                                             self.getControl(int(nextprogram1)).setPosition(673, int(pos_Y))
+
+                                             if int(nextprogram1_width) == 691:
+                                                     self.getControl(int(nextprogram2)).setPosition(1369, int(pos_Y))
+
+
+
+                                 elif int(program_width) == 228:
+                                     print "you are in the 228 number 2"
+                                     self.getControl(int(nextprogram)).setPosition(410, int(pos_Y))
+
+                                     if int(nextprogram_width) == 108:
+                                         nextprogram_width = 118
+                                         self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                         if int(nextprogram_width) == 118:
+                                             self.getControl(int(nextprogram1)).setPosition(710, int(pos_Y))
+
+
+
+                                 elif int(program_width) == 459:
+                                     print "you are in the 459 box"
+
+
+
+                                 elif int(program_width) == 691:
+                                     print "you are in the 228 number 2"
+                                     self.getControl(int(nextprogram)).setPosition(1072, int(pos_Y))
+
+                                     if int(nextprogram_width) == 167:
+                                         self.getControl(int(nextprogram1)).setPosition(1246, int(pos_Y))
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) == 167:
+                             print "you are working on 167"
+                             print "nextprogram_label"
+                             print nextprogram_label
+                             self.getControl(int(program_id)).setLabel(nextprogram_label)
+                             self.getControl(int(program_id)).setWidth(nextprogram_width)
+                             self.getControl(int(nextprogram)).setLabel(nextprogram1_label)
+                             self.getControl(int(nextprogram)).setWidth(nextprogram1_width)
+                             self.getControl(int(nextprogram1)).setLabel(nextprogram2_label)
+                             self.getControl(int(nextprogram1)).setWidth(nextprogram2_width)
+                             self.getControl(int(nextprogram2)).setLabel(nextprogram3_label)
+                             self.getControl(int(nextprogram2)).setWidth(nextprogram3_width)
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+                             print "this code has changed the 167 to the next button"
+
+                             #if program_id == get_id:
+                                 #cur.execute('UPDATE programs SET program_id=? WHERE program_id=?', [program_id, empty_string])
+                                 #con.commit()
+                                 #print "let update the database 2"
+                             
+                             #print "program_width"
+                             #print program_width
+
+                             if int(program_width) == 167:
+                                 if int(nextprogram_width) == 59:
+                                     nextprogram_width = 56
+                                     self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                     if int(nextprogram_width) == 56:
+                                         self.getControl(int(nextprogram1)).setPosition(610, int(pos_Y))
+
+
+                             elif int(program_width) == 342:
+                                 program_width = 344
+                                 self.getControl(int(program_id)).setWidth(int(program_width))
+                                 print "you are in the 344 in 167 area"
+
+                                 if int(program_width) >= 342 and int(program_width) <= 344:
+                                     self.getControl(int(nextprogram)).setPosition(724, int(pos_Y))
+
+                                     if int(nextprogram_width) == 396:
+                                         nextprogram_width = 408
+                                         self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                         if int(nextprogram_width) == 408:
+                                             self.getControl(int(nextprogram1)).setPosition(1138, int(pos_Y))
+
+
+
+                                     elif int(nextprogram_width) == 515:
+                                         self.getControl(int(nextprogram1)).setPosition(1246, int(pos_Y))
+
+
+
+                                     elif int(nextprogram_width) == 691:
+                                         self.getControl(int(nextprogram1)).setPosition(1419, int(pos_Y))
+
+
+
+                             elif int(program_width) >= 515 and int(program_width) <= 517:
+                                 program_width = 342
+                                 self.getControl(int(program_id)).setWidth(int(program_width))
+                                 #self.program_id.append(program_id)
+                                 print "you are here nooooooooooooooowwwwwwwwwwwwwwwwwww 1"
+                                 print "program_id"
+
+
+                                 
+                                 if int(program_width) == 342:
+                                     self.getControl(int(nextprogram)).setPosition(724, int(pos_Y))
+
+
+                                     if int(nextprogram_width) == 167:
+                                         nextprogram_width = 168
+                                         self.getControl(int(program_id)).setWidth(int(program_width))
+
+                                         if int(nextprogram_width) == 168:
+                                             self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+                                             if int(nextprogram1_width) == 691:
+                                                 self.getControl(int(nextprogram2)).setPosition(1767, int(pos_Y))
+
+
+
+
+                                     elif int(nextprogram_width) >= 342 and int(nextprogram_width) <= 344:
+                                         nextprogram_width = 342
+                                         self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                         if int(nextprogram_width) == 342:
+                                             self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+
+                                         elif int(nextprogram_width) >= 691:
+                                             self.getControl(int(nextprogram1)).setPosition(1572, int(pos_Y))
+
+
+
+                                     elif int(nextprogram_width) >= 515 and int(nextprogram_width) <= 517:
+                                         self.getControl(int(nextprogram1)).setPosition(1246, int(pos_Y))
+
+
+
+
+                             elif int(program_width) == 691:
+                                 self.getControl(int(nextprogram)).setPosition(1072, int(pos_Y))
+                                 #test = int(program_id) + 1
+                                 #print "test"
+                                 #test = ''
+                                 #cur.execute('UPDATE programs SET program_id=? WHERE program_id=?', [program_id, test])
+                                 #con.commit()
+
+                                 if int(nextprogram_width) == 691:
+                                     self.getControl(int(nextprogram1)).setPosition(1767, int(pos_Y))
+
+
+
+                             elif int(program_width) >= 1197:
+                                 self.getControl(int(nextprogram)).setPosition(1572, int(pos_Y))
+
+                                 self.getControl(int(nextprogram)).setPosition(50, 50)
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) == 117:
+                             pass
+
+
+
+
+                         elif int(programX) == 375 and int(program_width) == 59:
+                             print "you are working on number 59"
+                             self.getControl(int(program_id)).setLabel(nextprogram_label)
+                             self.getControl(int(program_id)).setWidth(nextprogram_width)
+                             self.getControl(int(nextprogram)).setLabel(nextprogram1_label)
+                             self.getControl(int(nextprogram)).setWidth(nextprogram1_width)
+                             self.getControl(int(nextprogram1)).setWidth(nextprogram2_width)
+                             self.getControl(int(nextprogram1)).setLabel(nextprogram2_label)
+                             self.getControl(int(nextprogram2)).setWidth(nextprogram3_width)
+                             self.getControl(int(nextprogram2)).setLabel(nextprogram3_label)
+                             program_width = self.getControl(int(program_id)).getWidth()
+                             nextprogram_width = self.getControl(int(nextprogram)).getWidth()
+                             nextprogram1_width = self.getControl(int(nextprogram1)).getWidth()
+                             nextprogram2_width = self.getControl(int(nextprogram2)).getWidth()
+                             nextprogram3_width = self.getControl(int(nextprogram3)).getWidth()
+
+                             if int(program_width) == 59 and int(nextprogram_width) >= 560 and nextprogram_width <= 567:
+                                 nextprogram_width = 277
+                                 self.getControl(int(nextprogram)).setWidth(int(nextprogram_width))
+
+                                 if int(nextprogram_width) == 277:
+                                     self.getControl(int(nextprogram)).setPosition(659, int(pos_Y))
+
+
+
+
+                             elif int(program_width) == 59 and nextprogram_width == 278:
+                                 print "hello"
+                                 self.getControl(int(nextprogram)).setPosition(724, int(pos_Y))
+                                 self.getControl(int(nextprogram1)).setPosition(1072, int(pos_Y))
+
+
+
+                             elif int(program_width) == 277:
+                                 self.getControl(int(nextprogram)).setPosition(659, int(pos_Y))
+
+                                 if int(nextprogram_width) == 342:
+                                     self.getControl(int(nextprogram1)).setPosition(724, int(pos_Y))
+
+
+                             elif int(program_width) == 278:
+                                 pass
+                                 #self.getControl(int(nextprogram)).setPosition(659, int(pos_Y))
+                                 
+
+
+
+                             elif int(program_width) == 342:
+                                 self.getControl(int(nextprogram1)).setPosition(724, int(pos_Y))
+                                 self.getControl(int(nextprogram2)).setPosition(1072, int(pos_Y))
+
+
+
+                             elif int(program_width) == 567:
+                                 self.getControl(int(nextprogram)).setPosition(959, int(pos_Y))
+                                 print "you are working on 567 in the 59"
+
+                                 if int(nextprogram_width) == 59:
+                                     self.getControl(int(nextprogram1)).setPosition(1022, int(pos_Y))
+
+                                     if int(nextprogram1_width) == 691:
+                                         self.getControl(int(nextprogram2)).setPosition(1718, int(pos_Y))
+
+
+
+                             elif int(program_width) == 741:
+                                 program_width = 399
+                                 self.getControl(int(program_id)).setWidth(program_width)
+
+                                 if int(program_width) == 399:
+                                     self.getControl(int(nextprogram)).setPosition(782, int(pos_Y))
+
+                                     if int(nextprogram_width) > 1072:
+                                         self.getControl(int(nextprogram1)).setPosition(1856, int(pos_Y))
+
+
+                             elif int(program_width) >= 1197:
+                                 self.getControl(int(nextprogram)).setPosition(1419, int(pos_Y))
+
+                             print "you are working on 59"
